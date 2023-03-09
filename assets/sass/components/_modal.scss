@@ -1,0 +1,84 @@
+.modal {
+  .modal-size {
+    width: 90rem !important;
+    max-width: 100%;
+  }
+  .modal-dialog-centered {
+    align-items: flex-end;
+  }
+
+  .modal-header {
+    padding: 3.2rem 1.6rem;
+    background-color: $modal-color;
+    color: $main-color-2;
+    justify-content: center;
+    h3 {
+      font-size: 3rem;
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-weight: normal;
+      margin: 1rem 0;
+    }
+
+    .btn-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 1.6rem 2rem;
+      margin: 0;
+      border: none;
+      border-radius: 0;
+      font-size: 2rem;
+      line-height: 1;
+      opacity: 1;
+      color: $main-color-2;
+      background-color: transparent;
+      background-image: none;
+      &:hover {
+        background-color: #ccc;
+        color: $main-color-1;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 0 1.5rem;
+    .col-form-label {
+      margin: 1.5rem 0;
+      font-size: 1.6rem;
+    }
+    .form-control {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 0;
+      font-size: 1.6rem;
+    }
+    .btn-pay {
+      display: block;
+      width: 100%;
+      padding: 1.6rem;
+      margin: 1.5rem 0;
+      border: none;
+      background-color: $modal-color;
+      color: $main-color-2;
+      &:hover {
+        background-color: #ccc;
+        color: $main-color-1;
+      }
+    }
+  }
+
+  .modal__footer {
+    @include flex(space-between);
+    padding: 1.5rem;
+    .btn-close-2 {
+      padding: 8px 16px;
+      border: none;
+      background-color: $main-color-3;
+      color: $main-color-2;
+      &:hover {
+        background-color: #ccc;
+        color: $main-color-1;
+      }
+    }
+  }
+}
