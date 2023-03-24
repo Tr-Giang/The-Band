@@ -21,25 +21,48 @@
   <body>
     <div id="app">
       <header>
-        <ul class="nav-bar">
-          <li class="nav-item"><a href="#home">HOME</a></li>
-          <li class="nav-item"><a href="#about">BAND</a></li>
-          <li class="nav-item"><a href="#tour">TOUR</a></li>
-          <li class="nav-item"><a href="#contact">CONTACT</a></li>
-          <li class="nav-item">
-            <span href="!#" title="More"
-              >MORE <i class="fa-solid fa-caret-down"></i
-            ></span>
-            <ul class="sub-nav">
-              <li class="sub-nav-item"><a href="!#">Merchandise</a></li>
-              <li class="sub-nav-item"><a href="!#">Extras</a></li>
-              <li class="sub-nav-item"><a href="!#">Media</a></li>
-            </ul>
-          </li>
-        </ul>
-        <button class="search">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
+        <div class="header-pc">
+          <ul class="nav-bar">
+            <li class="nav-item"><a href="#home">HOME</a></li>
+            <li class="nav-item"><a href="#about">BAND</a></li>
+            <li class="nav-item"><a href="#tour">TOUR</a></li>
+            <li class="nav-item"><a href="#contact">CONTACT</a></li>
+            <li class="nav-item">
+              <span href="!#" title="More"
+                >MORE <i class="fa-solid fa-caret-down"></i
+              ></span>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="!#">Merchandise</a></li>
+                <li class="sub-nav-item"><a href="!#">Extras</a></li>
+                <li class="sub-nav-item"><a href="!#">Media</a></li>
+              </ul>
+            </li>
+          </ul>
+          <button class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div data-father="nav_list" class="header-mobile">
+          <button data-menu="nav_list" class="nav-btn">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <ul class="nav-bar">
+            <li class="nav-item"><a href="#home">HOME</a></li>
+            <li class="nav-item"><a href="#about">BAND</a></li>
+            <li class="nav-item"><a href="#tour">TOUR</a></li>
+            <li class="nav-item"><a href="#contact">CONTACT</a></li>
+            <li class="nav-item" data-father="navbar" data-menu="navbar">
+              <span title="More"
+                >MORE <i class="fa-solid fa-caret-down"></i
+              ></span>
+              <ul class="sub-nav">
+                <li class="sub-nav-item"><a href="!#">Merchandise</a></li>
+                <li class="sub-nav-item"><a href="!#">Extras</a></li>
+                <li class="sub-nav-item"><a href="!#">Media</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </header>
       <main id="home">
         <div class="slider">
@@ -294,7 +317,7 @@
             <a href="!#"><i class="fa-brands fa-twitter"></i></a>
             <a href="!#"><i class="fa-brands fa-linkedin-in"></i></a>
           </div>
-          <p>Powered by <a href="!#">Tr-Giang</a></p>
+          <p>Powered by <a class="author" href="!#">Tr-Giang</a></p>
         </div>
       </footer>
 

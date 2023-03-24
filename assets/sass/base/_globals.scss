@@ -18,7 +18,8 @@ body {
 }
 
 .wrapper {
-  width: 80rem;
+  width: 100%;
+  max-width: 80rem;
   margin: 0 auto;
   padding: 6.4rem 1.6rem;
 }
@@ -52,5 +53,9 @@ body {
   &:hover {
     background-color: $hover-color1;
     color: $main-color-1;
+  }
+
+  @include mobile {
+    width: 100%;
   }
 }

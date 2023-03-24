@@ -50,21 +50,27 @@ main {
   .member {
     @include flex(space-around);
     padding: 3.2rem 0;
-  }
 
-  .member-item {
-    text-align: center;
-  }
+    .member-item {
+      text-align: center;
+    }
 
-  .member-name {
-    margin: 1.5rem 0;
-    line-height: 1.6;
-  }
+    .member-name {
+      margin: 1.5rem 0;
+      line-height: 1.6;
+    }
 
-  .member-img {
-    width: 60%;
-    margin: 0 auto;
-    border-radius: 4px;
+    .member-img {
+      width: 60%;
+      margin: 0 auto;
+      border-radius: 4px;
+    }
+    @include mobile {
+      flex-direction: column;
+      .member-item {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -115,8 +121,6 @@ main {
   .address {
     @include flex(space-between);
     gap: 1.6rem;
-    .address-item {
-    }
 
     .address-img:hover {
       opacity: 0.5;
@@ -143,6 +147,15 @@ main {
       margin-bottom: 1.5rem;
       font-size: 1.5rem;
     }
+    @include mobile {
+      flex-direction: column;
+      .address-item {
+        width: 100%;
+      }
+      .address-img {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -150,6 +163,21 @@ main {
   .contact-body {
     @include flex(space-between, flex-start);
     margin: 4.8rem 0;
+
+    @include mobile {
+      flex-direction: column;
+      // align-items: center;
+      .contact-form {
+        width: 100%;
+        .wrapper-form {
+          flex-direction: column;
+          input {
+            width: 100%;
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
   }
 
   .contact-info {

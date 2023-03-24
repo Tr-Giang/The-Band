@@ -1,4 +1,4 @@
-header {
+.header-pc {
   @include flex(space-between);
   width: 100%;
   height: $header-height;
@@ -7,6 +7,13 @@ header {
   position: fixed;
   top: 0;
   z-index: 99;
+  @include mobile {
+    display: none;
+  }
+  @include pcAndTablet {
+    display: flex;
+  }
+
   .nav-bar {
     @include flex(none);
     .nav-item {
@@ -74,4 +81,100 @@ header {
       background-color: $main-color-3;
     }
   }
+}
+
+.header-mobile {
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 0 1px 5px 0px #111;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  height: 4.6rem;
+  overflow: hidden;
+  @include pcAndTablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: flex;
+  }
+
+  .nav-bar {
+    display: flex;
+    flex-direction: column;
+    background-color: $main-color-1;
+
+    .nav-item {
+      position: relative;
+      a,
+      span {
+        display: block;
+        color: $main-color-2;
+        font-weight: 500;
+        letter-spacing: -0.7px;
+        line-height: $header-height;
+        padding: 0 2.4rem;
+        cursor: pointer;
+        i {
+          font-size: 1.4rem;
+        }
+      }
+      &:hover {
+        background-color: $hover-color1;
+        a,
+        span {
+          color: $main-color-1;
+        }
+      }
+
+      .sub-nav {
+        display: block;
+        .sub-nav-item {
+          background-color: $main-color-1;
+          min-width: 16rem;
+          a {
+            padding: 0;
+            display: block;
+            padding: 1.2rem 4.8rem;
+            line-height: 100%;
+            color: $main-color-2;
+          }
+
+          &:hover {
+            background-color: #ccc;
+            a {
+              color: $main-color-1;
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        height: 4.6rem;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .nav-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    padding: 0 2.4rem;
+    height: 4.6rem;
+    background-color: $main-color-1;
+    color: $main-color-2;
+    z-index: 9;
+
+    &:hover {
+      background-color: #ccc;
+      color: $main-color-1;
+    }
+  }
+}
+
+.active {
+  overflow: visible !important;
 }
